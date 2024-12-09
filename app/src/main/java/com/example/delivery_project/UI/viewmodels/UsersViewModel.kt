@@ -45,7 +45,6 @@ class UsersViewModel(aplication : Application): AndroidViewModel(aplication) {
             loginRequest,
             onSuccess = { token ->
 
-                // Guardar el token en SharedPreferences
                 val sharedPreferences = getApplication<Application>().getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
                 editor.putString("auth_token", token)
